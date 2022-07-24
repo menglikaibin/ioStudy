@@ -15,12 +15,12 @@ public class Server {
             // 开始监听
             System.out.println("服务器开始监听，监听端口：" + port);
             while (true) {
-                Socket accept = serverSocket.accept();// 阻塞
+                Socket accept = serverSocket.accept();// 阻塞 等待客户端连接
                 System.out.println("接受到一个客户端的请求。。。");
                 InputStream in = accept.getInputStream();
                 int len = -1;
                 byte[] buff = new byte[1024];
-                while ((len = in.read(buff)) != -1) {
+                while ((len = in.read(buff)) != -1) { // 阻塞 等待客户端发送数据
                     String str = new String(buff, 0, len);
                     System.out.println("读取到客户端输入字符：" + str);
                 }
