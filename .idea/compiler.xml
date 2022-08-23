@@ -9,6 +9,7 @@
         <module name="BIO-model" />
         <module name="NIO-model" />
         <module name="AIO-model" />
+        <module name="demo" />
       </profile>
     </annotationProcessing>
   </component>
